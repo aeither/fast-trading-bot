@@ -1,5 +1,5 @@
 {
-  "name": "recall-bot",
+  "name": "fast-trading-bot",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -22,6 +22,8 @@
     "@mastra/libsql": "^0.11.0",
     "@mastra/loggers": "^0.10.3",
     "@mastra/memory": "^0.11.3",
+    "axios": "^1.10.0",
+    "axios-retry": "^4.5.0",
     "zod": "^3.25.76"
   },
   "devDependencies": {
