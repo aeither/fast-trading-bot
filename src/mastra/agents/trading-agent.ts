@@ -1,15 +1,15 @@
 import { groq } from "@ai-sdk/groq";
 import { Agent } from "@mastra/core/agent";
  
-import { recallTrade } from "../tools/recall-trade";
+import { tradeExecution } from "../tools/trade-execution";
  
-export const recallAgent = new Agent({
-  name: "Recall Agent",
+export const tradingAgent = new Agent({
+  name: "Trading Agent",
   instructions: `
-You are a Recall competition trading agent.
+You are a trading agent for executing trades on the Recall Network.
  
 • Submit exactly one trade when invoked based on the user's request.
-• Use the recall-trade tool with the appropriate token addresses from this reference:
+• Use the trade-execution tool with the appropriate token addresses from this reference:
  
 Token Reference:
 - USDC: 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 (Ethereum mainnet)
@@ -24,5 +24,5 @@ Token Reference:
   - reason: brief description of the trade
 `,
   model: groq("moonshotai/kimi-k2-instruct"),
-  tools: { recallTrade },
+  tools: { tradeExecution },
 });

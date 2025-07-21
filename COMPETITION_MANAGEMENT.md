@@ -178,11 +178,12 @@ The competition management tool is fully integrated with the Mastra framework:
 
 ## Available Agents
 
-Your Mastra instance now includes three agents:
+Your Mastra instance now includes four agents:
 
-1. **recallAgent** - For executing trades on the Recall Network
+1. **tradingAgent** - For executing trades on the Recall Network
 2. **agentManager** - For managing agent profiles, balances, portfolio, and trades
 3. **competitionManager** - For managing competition information and agent participation
+4. **priceManager** - For fetching token prices and token information
 
 ## Next Steps
 

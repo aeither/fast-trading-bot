@@ -2,8 +2,8 @@ import { createTool } from "@mastra/core/tools";
 import axios from "axios";
 import { z } from "zod";
  
-export const recallTrade = createTool({
-  id: "recall-trade",
+export const tradeExecution = createTool({
+  id: "trade-execution",
   description: "Execute a spot trade on the Recall Network",
   inputSchema: z.object({
     fromToken: z.string().describe("ERC-20 address"),

@@ -2,15 +2,15 @@ import { createStep, createWorkflow } from "@mastra/core/workflows";
 import { z } from "zod";
  
 const tradeStep = createStep({
-  id: "run-recall-agent",
-  description: "Invoke the Recall agent to place one sandbox trade",
+  id: "run-trading-agent",
+  description: "Invoke the Trading agent to place one sandbox trade",
   inputSchema: z.void(),
   outputSchema: z.object({
     result: z.string(),
   }),
   execute: async ({ mastra }) => {
-    const agent = mastra?.getAgent("recallAgent");
-    if (!agent) throw new Error("recallAgent not found");
+    const agent = mastra?.getAgent("tradingAgent");
+    if (!agent) throw new Error("tradingAgent not found");
  
     const response = await agent.stream([{ role: "user", content: "Make a trade now." }]);
  
